@@ -46,7 +46,7 @@ export default function Convert() {
             <div className='line'></div>
 
             <form>
-                <div class="mb-3">
+                <div class="mb-3 mt-3">
                     <label for="exampleFormControlInput1" class="form-label">Enter your Text:</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1"
                     onChange={Onchange} value={myText} rows="8"></textarea>
