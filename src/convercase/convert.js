@@ -16,7 +16,29 @@ export default function Convert() {
         setMyText(newText);
     }
 
- 
+    // uper case
+    const UpperCase=()=>{
+        let newText=myText.toUpperCase();
+        setMyText(newText);
+    }
+
+    // capitalize
+      const Capitalize=()=>{
+      let newText=myText.replace(/(?:^|\s)\s/g, function (a){return a.toUpperCase();});
+        setMyText(newText);
+    }
+    
+    // revers
+     const reversCase=()=>{
+        let newText=myText.split('').reverse().join('');
+        setMyText(newText);
+    }
+
+     // clear
+     const clear=()=>{
+       
+        setMyText('');
+    }
 
     return (
         <div className='container mt-5'>
@@ -32,10 +54,10 @@ export default function Convert() {
                 </div>
                 <div className='d-flex justify-content-center mt-5'>
                     <button type="button" class="btn btn-color me-3" onClick={LowerCase}>Lower case</button>
-                    <button type="button" class="btn btn-color me-3" >UPPER CASE</button>
-                    <button type="button" class="btn btn-color me-3" >Capitalize</button>
-                    <button type="button" class="btn btn-color me-3">Reverse</button>
-                    <button type="button" class="btn btn-color me-3" >Clear</button>
+                    <button type="button" class="btn btn-color me-3" onClick={UpperCase}>UPPER CASE</button>
+                    <button type="button" class="btn btn-color me-3" onClick={Capitalize}>Capitalize</button>
+                    <button type="button" class="btn btn-color me-3" onClick={reversCase}>Reverse</button>
+                    <button type="button" class="btn btn-color me-3" onClick={clear}>Clear</button>
                 </div>
             </form>
 
